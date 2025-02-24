@@ -1,0 +1,182 @@
+/* ========== RESET BÁSICO ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    color: #333;
+}
+
+/* ========== ENCABEZADO ========== */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Buscador */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 0.3rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-form button {
+    padding: 0.3rem 0.6rem;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+.search-form button:hover {
+    background-color: #555;
+}
+
+/* ========== CONTENEDOR PRINCIPAL ========== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* ========== SECCIONES ========== */
+.section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+/* ========== LISTA DE LIBROS ========== */
+ul.libros-list {
+    list-style: none;
+}
+
+ul.libros-list li {
+    margin-bottom: 1.5rem;
+}
+
+ul.libros-list li img {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.book-info {
+    margin-bottom: 0.5rem;
+}
+
+/* ========== BOTONES ========== */
+.btn {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: #666;
+}
+
+/* ========== CARRUSEL SIMPLE ========== */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    background-color: #91919166;
+
+}
+
+/* Botones de navegación del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.carousel-btn:hover {
+    background-color: rgba(0,0,0,0.7);  
+}
+.carousel-btn.left {
+    left: 10px;
+}
+.carousel-btn.right {
+    right: 10px;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.8rem;
+}

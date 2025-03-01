@@ -14,7 +14,6 @@ include 'libros.php';
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
 <header>
     <div class="header-container">
         <div class="logo">MeBook 📖</div>
@@ -24,24 +23,22 @@ include 'libros.php';
         </nav>
     </div>
 </header>
-
 <div class="container">
     <h2 class="section-title">Gestionar Libros</h2>
-    <p>Aquí se podrían añadir, editar o eliminar libros. (Funcionalidad en desarrollo)</p>
+    <p>Aquí se pueden editar o eliminar libros.</p>
     <ul>
         <?php foreach ($libros as $libro): ?>
             <li>
-                <strong><?= $libro['titulo'] ?></strong> - <?= $libro['autor'] ?>
-                | <a class="btn" href="#">Editar</a>
-                | <a class="btn" href="#">Eliminar</a>
+                <strong><?= htmlspecialchars($libro['titulo']) ?></strong> - <?= htmlspecialchars($libro['autor']) ?>
+                | <a class="btn" href="editar_libro.php?id=<?= $libro['id'] ?>">Editar</a>
+                | <a class="btn" href="eliminar_libro.php?id=<?= $libro['id'] ?>" onclick="return confirm('¿Seguro que deseas eliminar este libro?');">Eliminar</a>
             </li>
         <?php endforeach; ?>
     </ul>
+    <a class="btn" href="admin.php">Volver al Panel de Administración</a>
 </div>
-
-<footer>
+<footer style="position: absolute">
     <p>MeBook &copy; 2025-2030</p>
 </footer>
-
 </body>
 </html>

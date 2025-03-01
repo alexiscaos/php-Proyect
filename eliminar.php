@@ -10,7 +10,6 @@ if (isset($_GET['id'])) {
         $nuevoContenido = "";
         foreach ($lineas as $linea) {
             list($user, $id) = explode(",", $linea);
-            // Si coincide usuario e ID, omitimos la línea (así se “elimina”)
             if ($user === $usuario && trim($id) == $id_a_eliminar) {
                 continue;
             }

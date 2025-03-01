@@ -1,11 +1,10 @@
 <?php
 session_start();
-include 'libros.php'; // Incluye el array de libros
+include 'libros.php';   
 
 $usuario = $_SESSION['usuario'] ?? 'Invitado';
 $archivoLista = "lista_lectura.txt";
 
-// Si se recibe el parámetro para agregar un libro, se añade al archivo
 if (isset($_GET['agregar'])) {
     $id_libro = $_GET['agregar'];
     $linea = "$usuario,$id_libro\n";
@@ -14,7 +13,6 @@ if (isset($_GET['agregar'])) {
     exit;
 }
 
-// Leer la lista de lectura para el usuario actual
 $lista = [];
 if (file_exists($archivoLista)) {
     $lineas = file($archivoLista, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -26,7 +24,6 @@ if (file_exists($archivoLista)) {
     }
 }
 
-// Función para obtener los datos completos del libro por su ID
 function obtenerLibro($id, $libros) {
     foreach ($libros as $libro) {
         if ($libro['id'] == $id) {
@@ -55,16 +52,16 @@ function obtenerLibro($id, $libros) {
         </div>
     </header>
 
-    <div class="container">
+    <div class="container2">
         <h2 class="section-title">Mi Lista de Lectura</h2>
         <?php if (empty($lista)): ?>
             <p>No has añadido libros a tu lista.</p>
         <?php else: ?>
-            <ul>
+            <ul class="mi-Lista">
                 <?php foreach ($lista as $id_libro): ?>
                     <?php $libro = obtenerLibro($id_libro, $libros); ?>
                     <?php if ($libro): ?>
-                        <li>
+                        <li class="libro-miLista">
                             <img src="img/<?= htmlspecialchars($libro['imagen']) ?>" width="100" alt="<?= htmlspecialchars($libro['titulo']) ?>">
                             <strong><?= htmlspecialchars($libro['titulo']) ?></strong> (ID: <?= $id_libro ?>)
                             <a class="btn" href="eliminar.php?id=<?= $id_libro ?>">Eliminar</a>
@@ -75,7 +72,7 @@ function obtenerLibro($id, $libros) {
         <?php endif; ?>
     </div>
 
-    <footer>
+    <footer style="position: absolute">
         <p>MeBook &copy; 2025-2030</p>
     </footer>
 </body>

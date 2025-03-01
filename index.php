@@ -44,14 +44,14 @@
     <p>En MeBook gestionarás tus libros, explorarás el catálogo y podrás opinar sobre ellos.</p>
 
     <h3 class="section-title">Novedades</h3>
-    <div style="display: flex; gap: 1rem; overflow-x: auto;">
+    <div class="expositor">
         <img src="img/Hp.jpg" alt="Novedad 1" width="150">
         <img src="img/demian.jpg" alt="Novedad 2" width="150">
         <img src="img/libro2.jpg" alt="Novedad 3" width="150">
     </div>
 
     <h3 class="section-title">Recomendaciones</h3>
-    <div style="display: flex; gap: 1rem; overflow-x: auto;">
+    <div class="expositor">
         <img src="img/libro1.jpg" alt="Recomendado 1" width="150">
         <img src="img/crimen.jpg" alt="Recomendado 2" width="150">
         <img src="img/berserk.jpg" alt="Recomendado 3" width="150">
@@ -62,7 +62,7 @@
     <p>MeBook &copy; Copyright 2025-2030 &lt;3</p>
 </footer>
 
-<!-- Script para el carrusel (opcional) -->
+<!-- Carrusel del Codepen c: -->
 <script>
     const track = document.getElementById('carouselTrack');
     const slides = Array.from(track.children);

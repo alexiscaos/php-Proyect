@@ -1,7 +1,6 @@
 <?php
 include 'libros.php';
 
-// (Opcional) Lógica de búsqueda o filtrado...
 $busqueda = $_GET['busqueda'] ?? '';
 $resultados = [];
 if ($busqueda) {
@@ -13,7 +12,7 @@ if ($busqueda) {
 } else {
     $resultados = $libros;
 }
-?>
+?> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,7 +51,6 @@ if ($busqueda) {
                         Géneros: <?= implode(", ", $libro['generos']) ?><br>
                         Calificación: <?= $libro['calificacion'] ?>/5
                     </div>
-                    <!-- Botones: Ver detalles y Añadir a la lista -->
                     <a class="btn" href="detalle.php?id=<?= $libro['id'] ?>">Ver más</a>
                     <a class="btn" href="mi_lista.php?agregar=<?= $libro['id'] ?>">Añadir a mi lista</a>
                 </li>

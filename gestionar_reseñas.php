@@ -26,10 +26,11 @@ if (!isset($_SESSION['admin'])) {
 
 <div class="container">
     <h2 class="section-title">Gestionar Reseñas</h2>
-    <p>Aquí se podrían revisar y eliminar reseñas inapropiadas. (Funcionalidad en desarrollo)</p>
+    <p>Aqui se gestionan las reseñas (No si ni como logre gestionar los libros usando JSON)</p>
+    <img src="img/reseñas.jpg" alt="">
 </div>
 
-<footer>
+<footer style="position: absolute">
     <p>MeBook &copy; 2025-2030</p>
 </footer>
 

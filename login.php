@@ -4,7 +4,6 @@ $error = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
-    // Credenciales predefinidas para el administrador
     if ($username === 'admin' && $password === 'admin123') {
         $_SESSION['admin'] = true;
         header("Location: admin.php");
@@ -40,17 +39,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p style="color: red;"><?= $error ?></p>
     <?php endif; ?>
     <form method="post" action="login.php">
-        <label for="username">Usuario:</label><br>
+        <label for="username">Usuario: admin </label><br>
         <input type="text" name="username" id="username" required><br><br>
         
-        <label for="password">Contraseña:</label><br>
+        <label for="password">Contraseña: admin123</label><br>
         <input type="password" name="password" id="password" required><br><br>
         
         <button class="btn" type="submit">Iniciar Sesión</button>
     </form>
 </div>
 
-<footer>
+<footer style="position: absolute">
     <p>MeBook &copy; 2025-2030</p>
 </footer>
 

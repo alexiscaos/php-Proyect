@@ -30,7 +30,7 @@ if (!isset($_SESSION['admin'])) {
     <p>Bienvenido, Administrador.</p>
 </div>
 
-<footer>
+<footer style="position: absolute">
     <p>MeBook &copy; 2025-2030</p>
 </footer>
 
